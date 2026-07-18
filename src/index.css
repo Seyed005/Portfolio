@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-elevated: var(--elevated);
+  --color-accent: var(--accent);
+}
+
+:root {
+  --ink: #0a0a0a;
+  --ink-soft: #171717;
+  --paper: #fafafa;
+  --surface: #f4f4f5;
+  --muted: #737373;
+  --line: #e5e5e5;
+  --line-strong: #d4d4d4;
+  --elevated: #ffffff;
+  --accent: #0a0a0a;
+}
+
+.dark {
+  --ink: #f5f5f5;
+  --ink-soft: #e5e5e5;
+  --paper: #050505;
+  --surface: #0f0f0f;
+  --muted: #a3a3a3;
+  --line: #1f1f1f;
+  --line-strong: #333333;
+  --elevated: #111111;
+  --accent: #f5f5f5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    transition: background-color 0.35s ease, color 0.35s ease;
+  }
+
+  ::selection {
+    @apply bg-ink text-paper;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ink;
+  }
+}
+
+@layer utilities {
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  }
+
+  .grid-fade {
+    background-image:
+      linear-gradient(to right, color-mix(in oklab, var(--ink) 4.5%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--ink) 4.5%, transparent) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 75% 60% at 50% 30%, black 10%, transparent 75%);
+  }
+
+  .mesh-hero {
+    background:
+      radial-gradient(ellipse 70% 50% at 15% 15%, rgb(0 0 0 / 0.05), transparent 55%),
+      radial-gradient(ellipse 55% 45% at 85% 5%, rgb(0 0 0 / 0.04), transparent 50%),
+      radial-gradient(ellipse 45% 40% at 60% 90%, rgb(0 0 0 / 0.03), transparent 50%),
+      radial-gradient(ellipse 30% 25% at 50% 40%, rgb(0 0 0 / 0.02), transparent 60%);
+  }
+
+  .dark .mesh-hero {
+    background:
+      radial-gradient(ellipse 70% 50% at 15% 15%, rgb(255 255 255 / 0.06), transparent 55%),
+      radial-gradient(ellipse 55% 45% at 85% 5%, rgb(255 255 255 / 0.045), transparent 50%),
+      radial-gradient(ellipse 45% 40% at 60% 90%, rgb(255 255 255 / 0.035), transparent 50%),
+      radial-gradient(ellipse 30% 25% at 50% 40%, rgb(255 255 255 / 0.025), transparent 60%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glow-badge {
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--ink) 12%, transparent),
+      0 0 20px color-mix(in oklab, var(--ink) 8%, transparent),
+      0 0 40px color-mix(in oklab, var(--ink) 4%, transparent);
+  }
+
+  .dark .glow-badge {
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--ink) 18%, transparent),
+      0 0 24px color-mix(in oklab, var(--ink) 12%, transparent),
+      0 0 48px color-mix(in oklab, var(--ink) 6%, transparent);
+  }
+
+  .glass {
+    background: color-mix(in oklab, var(--paper) 75%, transparent);
+    backdrop-filter: blur(16px) saturate(1.2);
+  }
+}
