@@ -142,7 +142,7 @@ export default function Hero() {
                 <img
                   src="/profile.jpg"
                   alt={`${profile.name} — professional portrait`}
-                  className="absolute inset-0 m-auto size-[80%] object-contain object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="size-full object-cover object-[center_18%] transition-transform duration-700 ease-out group-hover:scale-105"
                   width={480}
                   height={480}
                   fetchPriority="high"
