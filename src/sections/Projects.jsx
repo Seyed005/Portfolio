@@ -8,9 +8,9 @@ export default function Projects() {
       id="projects"
       eyebrow="Projects"
       title="Selected security work."
-      description="Hands-on projects from network scanning and traffic analysis to application builds — all available on GitHub."
+      description="Hands-on cybersecurity labs covering reconnaissance, network scanning, and packet-level traffic analysis — each project documented on GitHub."
     >
-      <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 lg:gap-8">
         {projects.map((project, index) => (
           <ProjectCard key={project.title} project={project} index={index} />
         ))}

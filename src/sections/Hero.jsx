@@ -140,7 +140,7 @@ export default function Hero() {
               />
               <div className="group relative size-full overflow-hidden rounded-full border border-line bg-surface shadow-[0_24px_60px_-20px_rgba(0,0,0,0.35)] ring-1 ring-black/5 dark:shadow-[0_28px_70px_-18px_rgba(0,0,0,0.75)] dark:ring-white/10">
                 <img
-                  src="/profile.jpg"
+                  src="/profile.png"
                   alt={`${profile.name} — professional portrait`}
                   className="size-full object-cover object-[center_20%] transition-transform duration-700 ease-out group-hover:scale-105"
                   width={480}

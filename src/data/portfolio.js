@@ -14,7 +14,7 @@ export const profile = {
     'Available for SOC Internship',
     'Available for Penetration Testing Internship',
   ],
-  image: '/profile.jpg',
+  image: '/profile.png',
   resumeUrl: '/resume.pdf',
   socials: {
     github: 'https://github.com/Seyed005',
@@ -96,10 +96,10 @@ export const skills = [
 
 export const projects = [
   {
-    title: 'Security-Analys-1',
+    title: 'Security Analysis',
     description:
-      'Basic network scanning using Nmap to discover live hosts, open ports, and services inside a local subnet. Conducted from Kali Linux to map network security posture and potential exposure points.',
-    tags: ['Nmap', 'Kali Linux', 'Networking', 'Reconnaissance'],
+      'End-to-end security assessment of a local subnet from Kali Linux. Mapped live hosts, open ports, and running services with Nmap to evaluate exposure, identify weak entry points, and document the overall security posture of the lab environment.',
+    technologies: ['Nmap', 'Kali Linux', 'Networking', 'Reconnaissance'],
     github: 'https://github.com/Seyed005/Security-Analys-1',
     live: null,
     featured: true,
@@ -107,10 +107,10 @@ export const projects = [
     accent: 'from-neutral-900 to-neutral-600',
   },
   {
-    title: 'Network Scanning with Nmap',
+    title: 'Network Scanning Using Nmap',
     description:
-      'Network scanning workflows using Kali Linux and Nmap — host discovery, port enumeration, and service identification for authorized lab environments.',
-    tags: ['Nmap', 'Kali Linux', 'Network Security'],
+      'Practical network reconnaissance workflows built around Nmap. Covered host discovery, port enumeration, OS fingerprinting, and service version detection to produce clear, actionable scan results in authorized lab networks.',
+    technologies: ['Nmap', 'Kali Linux', 'Host Discovery', 'Port Scanning'],
     github: 'https://github.com/Seyed005/Nmap',
     live: null,
     featured: true,
@@ -118,37 +118,15 @@ export const projects = [
     accent: 'from-zinc-800 to-zinc-500',
   },
   {
-    title: 'Network Traffic Analysis',
+    title: 'Network Traffic Analysis Using Wireshark',
     description:
-      'Network traffic analysis using Wireshark with packet inspection across DNS, TCP/IP, and HTTP to understand protocol behavior and identify suspicious patterns.',
-    tags: ['Wireshark', 'TCP/IP', 'DNS', 'HTTP', 'Packet Analysis'],
+      'Deep-dive packet analysis with Wireshark across DNS, TCP/IP, and HTTP traffic. Inspected protocol behavior, followed conversation streams, and flagged anomalies to build stronger instincts for detecting suspicious network activity.',
+    technologies: ['Wireshark', 'TCP/IP', 'DNS', 'HTTP', 'Packet Analysis'],
     github: 'https://github.com/Seyed005/Wireshark',
     live: null,
     featured: true,
     image: '/projects/wireshark.svg',
     accent: 'from-stone-800 to-stone-500',
-  },
-  {
-    title: 'STUDO',
-    description:
-      'Student management web application focused on structured records, clean UI workflows, and reliable application design — practiced with secure input handling in mind.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Web'],
-    github: 'https://github.com/Seyed005/STUDO',
-    live: 'https://seyed005.github.io/STUDDO.github.io/',
-    featured: true,
-    image: '/projects/studo.svg',
-    accent: 'from-neutral-700 to-neutral-400',
-  },
-  {
-    title: 'Pentest Journey 2026',
-    description:
-      'A documented learning journey into penetration testing — methodology notes, lab progress, and practical security concepts building toward professional offensive security skills.',
-    tags: ['Penetration Testing', 'Learning', 'Documentation'],
-    github: 'https://github.com/Seyed005/Pentest-Journey-2026',
-    live: null,
-    featured: true,
-    image: '/projects/pentest.svg',
-    accent: 'from-zinc-900 to-zinc-600',
   },
 ]
 
