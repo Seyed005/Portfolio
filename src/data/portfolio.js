@@ -14,7 +14,7 @@ export const profile = {
     'Available for SOC Internship',
     'Available for Penetration Testing Internship',
   ],
-  image: '/profile.png',
+  image: '/profile.jpg',
   resumeUrl: '/resume.pdf',
   socials: {
     github: 'https://github.com/Seyed005',
