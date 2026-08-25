@@ -34,7 +34,7 @@ export default function Contact() {
   }
 
   const fieldClass =
-    'w-full rounded-xl border border-line bg-elevated px-4 py-3.5 text-sm text-ink outline-none transition-colors placeholder:text-muted focus:border-ink'
+    'w-full rounded-xl border border-line/80 bg-[var(--glass-bg)] px-4 py-3.5 text-sm text-ink outline-none backdrop-blur-sm transition-all duration-300 placeholder:text-muted focus:border-ink focus:bg-[var(--glass-bg-strong)] focus:shadow-[0_0_0_3px_color-mix(in_oklab,var(--ink)_6%,transparent)]'
 
   const contacts = [
     {
@@ -83,14 +83,14 @@ export default function Contact() {
               const Icon = item.icon
               const content = (
                 <>
-                  <span className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl border border-line bg-elevated text-muted">
+                  <span className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl border border-line/80 bg-[var(--glass-bg)] text-muted backdrop-blur-sm transition-colors duration-300 group-hover:border-line-strong group-hover:text-ink">
                     <Icon className="size-4" aria-hidden />
                   </span>
                   <span>
                     <span className="block text-xs font-medium uppercase tracking-[0.16em] text-muted">
                       {item.label}
                     </span>
-                    <span className="mt-1 block text-base text-ink">{item.value}</span>
+                    <span className="mt-1.5 block text-base text-ink">{item.value}</span>
                   </span>
                 </>
               )
@@ -102,12 +102,12 @@ export default function Contact() {
                       href={item.href}
                       target={item.href.startsWith('http') ? '_blank' : undefined}
                       rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
-                      className="flex gap-4 rounded-2xl p-3 transition-colors hover:bg-surface"
+                      className="group flex gap-4 rounded-2xl p-3.5 transition-all duration-300 hover:bg-[var(--glass-bg)] hover:backdrop-blur-sm"
                     >
                       {content}
                     </a>
                   ) : (
-                    <div className="flex gap-4 rounded-2xl p-3">{content}</div>
+                    <div className="flex gap-4 rounded-2xl p-3.5">{content}</div>
                   )}
                 </li>
               )
@@ -118,7 +118,7 @@ export default function Contact() {
         <Reveal delay={0.08}>
           <form
             onSubmit={onSubmit}
-            className="rounded-2xl border border-line bg-elevated p-6 sm:p-8"
+            className="glass-card rounded-2xl p-6 sm:p-8"
             noValidate
           >
             <div className="grid gap-5 sm:grid-cols-2">

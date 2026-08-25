@@ -6,6 +6,8 @@ import ScrollProgress from '../components/ui/ScrollProgress'
 import LoadingScreen from '../components/ui/LoadingScreen'
 import PageTransition from '../components/ui/PageTransition'
 import BackToTop from '../components/ui/BackToTop'
+import AuroraBackground from '../components/ui/AuroraBackground'
+import MouseSpotlight from '../components/ui/MouseSpotlight'
 import Hero from '../sections/Hero'
 
 const About = lazy(() => import('../sections/About'))
@@ -17,7 +19,7 @@ const Achievements = lazy(() => import('../sections/Achievements'))
 const Contact = lazy(() => import('../sections/Contact'))
 
 function SectionFallback() {
-  return <div className="min-h-40 border-t border-line bg-paper" aria-hidden />
+  return <div className="min-h-40 border-t border-line/70" aria-hidden />
 }
 
 export default function Home() {
@@ -39,9 +41,11 @@ export default function Home() {
         >
           Skip to content
         </a>
+        <AuroraBackground />
+        <MouseSpotlight />
         <ScrollProgress />
         <Navbar />
-        <main id="main">
+        <main id="main" className="relative z-10">
           <Hero />
           <Suspense fallback={<SectionFallback />}>
             <About />
@@ -53,7 +57,9 @@ export default function Home() {
             <Contact />
           </Suspense>
         </main>
-        <Footer />
+        <div className="relative z-10">
+          <Footer />
+        </div>
         <BackToTop />
       </PageTransition>
     </>

@@ -7,13 +7,13 @@ export default function CertificateCard({ certificate, index = 0, onOpen }) {
       <motion.button
         type="button"
         onClick={() => onOpen(certificate)}
-        whileHover={{ y: -6, scale: 1.03 }}
+        whileHover={{ y: -6, scale: 1.02 }}
         whileTap={{ scale: 0.99 }}
-        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-        className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-line bg-elevated text-left shadow-[0_1px_0_0_var(--line)] transition-shadow duration-300 hover:border-line-strong hover:shadow-[0_24px_50px_-28px_rgba(0,0,0,0.4)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink dark:hover:shadow-[0_24px_50px_-24px_rgba(0,0,0,0.85)]"
+        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+        className="glass-card group flex h-full w-full flex-col overflow-hidden rounded-2xl text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
         aria-label={`View ${certificate.title} certificate`}
       >
-        <div className="relative aspect-[4/3] overflow-hidden border-b border-line bg-surface">
+        <div className="relative aspect-[4/3] overflow-hidden border-b border-line/60 bg-surface/50">
           <img
             src={certificate.image}
             alt=""
@@ -30,12 +30,12 @@ export default function CertificateCard({ certificate, index = 0, onOpen }) {
         </div>
 
         <div className="flex flex-1 flex-col p-5 sm:p-6">
-          <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
+          <h3 className="font-display text-lg font-semibold tracking-tight text-ink sm:leading-snug">
             {certificate.title}
           </h3>
-          <p className="mt-2 text-sm text-ink-soft">{certificate.issuer}</p>
+          <p className="mt-2.5 text-sm text-ink-soft">{certificate.issuer}</p>
           {certificate.date && (
-            <p className="mt-3 text-xs uppercase tracking-[0.14em] text-muted">
+            <p className="mt-3.5 text-xs uppercase tracking-[0.14em] text-muted">
               {certificate.date}
             </p>
           )}

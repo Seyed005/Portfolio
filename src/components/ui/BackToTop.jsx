@@ -21,7 +21,7 @@ export default function BackToTop() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 12, scale: 0.95 }}
           transition={{ duration: 0.25 }}
-          className="fixed bottom-6 right-5 z-50 inline-flex size-11 items-center justify-center rounded-full border border-line bg-elevated text-ink shadow-lg shadow-black/5 transition-colors hover:bg-surface sm:bottom-8 sm:right-8"
+          className="fixed bottom-6 right-5 z-50 inline-flex size-11 items-center justify-center rounded-full border border-line/80 bg-[var(--glass-bg-strong)] text-ink shadow-lg shadow-black/10 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-line-strong hover:shadow-xl sm:bottom-8 sm:right-8"
           aria-label="Back to top"
         >
           <ArrowUp className="size-4" />

@@ -30,7 +30,7 @@ export default function SocialLinks({ className = '', size = 'md' }) {
               aria-label={label}
               target={key === 'email' ? undefined : '_blank'}
               rel={key === 'email' ? undefined : 'noreferrer'}
-              className={`inline-flex ${sizeClass} items-center justify-center rounded-full border border-line bg-elevated text-ink transition-colors hover:bg-surface`}
+              className={`inline-flex ${sizeClass} items-center justify-center rounded-full border border-line/80 bg-[var(--glass-bg)] text-ink backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-line-strong hover:bg-[var(--glass-bg-strong)] hover:shadow-[0_10px_24px_-12px_rgba(0,0,0,0.25)]`}
             >
               <Icon className={iconClass} />
             </a>

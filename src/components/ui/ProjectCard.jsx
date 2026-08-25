@@ -10,11 +10,11 @@ export default function ProjectCard({ project, index = 0 }) {
   return (
     <Reveal delay={index * 0.08}>
       <motion.article
-        whileHover={{ y: -10 }}
-        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-elevated transition-[border-color,box-shadow] duration-500 hover:border-ink/25 hover:shadow-[0_28px_60px_-28px_rgba(0,0,0,0.4)] dark:hover:border-white/20 dark:hover:shadow-[0_28px_60px_-28px_rgba(0,0,0,0.85)]"
+        whileHover={{ y: -8 }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        className="glass-card group relative flex h-full flex-col overflow-hidden rounded-3xl"
       >
-        <div className="relative aspect-[16/11] overflow-hidden border-b border-line bg-surface">
+        <div className="relative aspect-[16/11] overflow-hidden border-b border-line/60 bg-surface/50">
           <img
             src={project.image}
             alt=""
@@ -30,22 +30,22 @@ export default function ProjectCard({ project, index = 0 }) {
         </div>
 
         <div className="flex flex-1 flex-col p-7 sm:p-8 lg:p-9">
-          <h3 className="font-display text-2xl font-semibold tracking-tight text-ink transition-colors duration-300 group-hover:text-ink-soft sm:text-[1.65rem]">
+          <h3 className="font-display text-2xl font-semibold tracking-tight text-ink transition-colors duration-300 group-hover:text-ink-soft sm:text-[1.65rem] sm:leading-snug">
             {project.title}
           </h3>
-          <p className="mt-4 flex-1 text-[0.9375rem] leading-relaxed text-muted sm:text-base sm:leading-7">
+          <p className="mt-4 flex-1 text-[0.9375rem] leading-relaxed text-muted sm:mt-5 sm:text-base sm:leading-7">
             {project.description}
           </p>
 
-          <div className="mt-7">
+          <div className="mt-8">
             <p className="text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-muted">
               Technologies
             </p>
-            <ul className="mt-3 flex flex-wrap gap-2">
+            <ul className="mt-3.5 flex flex-wrap gap-2">
               {technologies.map((tech) => (
                 <li
                   key={tech}
-                  className="rounded-full border border-line bg-surface/80 px-3.5 py-1.5 text-xs text-ink-soft transition-all duration-300 group-hover:border-line-strong group-hover:bg-surface"
+                  className="rounded-full border border-line/80 bg-[var(--glass-bg)] px-3.5 py-1.5 text-xs text-ink-soft backdrop-blur-sm transition-all duration-300 group-hover:border-line-strong"
                 >
                   {tech}
                 </li>
@@ -59,7 +59,7 @@ export default function ProjectCard({ project, index = 0 }) {
               variant="secondary"
               target="_blank"
               rel="noreferrer"
-              className="px-5 py-2.5 text-sm transition-transform duration-300 group-hover:border-ink"
+              className="px-5 py-2.5 text-sm"
               magnetic={false}
             >
               <GithubIcon className="size-4" />

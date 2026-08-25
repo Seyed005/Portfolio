@@ -13,14 +13,14 @@ export default function CertTimeline({ items }) {
             <p className="pt-0.5 text-xs font-medium uppercase tracking-[0.18em] text-muted">
               {cert.year}
             </p>
-            <div className="rounded-2xl border border-transparent p-0 transition-colors sm:-ml-2 sm:border-line sm:bg-elevated sm:p-6 sm:hover:border-line-strong">
+            <div className="glass-card rounded-2xl p-5 sm:-ml-2 sm:p-6">
               <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
                 {cert.issuer}
               </p>
-              <h3 className="mt-2 font-display text-xl font-semibold tracking-tight text-ink sm:text-2xl">
+              <h3 className="mt-2.5 font-display text-xl font-semibold tracking-tight text-ink sm:text-2xl sm:leading-snug">
                 {cert.title}
               </h3>
-              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
+              <p className="mt-3.5 max-w-2xl text-sm leading-relaxed text-muted sm:text-base sm:leading-[1.75]">
                 {cert.description}
               </p>
             </div>

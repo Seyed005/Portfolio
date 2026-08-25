@@ -5,7 +5,7 @@ export default function AvailabilityBadge({ label }) {
 
   return (
     <div
-      className="glow-badge inline-flex items-center gap-2.5 rounded-full border border-line bg-elevated/90 px-4 py-2 text-sm font-medium text-ink backdrop-blur-sm"
+      className="glow-badge inline-flex items-center gap-2.5 rounded-full border border-line/80 bg-[var(--glass-bg-strong)] px-4 py-2 text-sm font-medium text-ink backdrop-blur-md"
       role="status"
     >
       <span className="relative flex size-2.5">

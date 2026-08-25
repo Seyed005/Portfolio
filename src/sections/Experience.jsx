@@ -18,7 +18,7 @@ export default function Experience() {
           {profile.availabilityDetails.map((item) => (
             <span
               key={item}
-              className="rounded-full border border-line bg-elevated px-3.5 py-1.5 text-xs text-muted sm:text-sm"
+              className="rounded-full border border-line/80 bg-[var(--glass-bg)] px-3.5 py-1.5 text-xs text-muted backdrop-blur-sm sm:text-sm"
             >
               {item}
             </span>
@@ -29,9 +29,9 @@ export default function Experience() {
       <div className="grid gap-5 lg:grid-cols-2">
         {experience.map((item, index) => (
           <Reveal key={item.title} delay={index * 0.06}>
-            <article className="h-full rounded-2xl border border-line bg-elevated p-6 transition-shadow duration-300 hover:shadow-[0_20px_40px_-28px_rgba(0,0,0,0.4)] sm:p-8">
-              <div className="mb-5 flex items-center justify-between gap-3">
-                <span className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-muted">
+            <article className="glass-card group h-full rounded-2xl p-6 hover:-translate-y-1.5 sm:p-8">
+              <div className="mb-6 flex items-center justify-between gap-3">
+                <span className="inline-flex items-center gap-2 rounded-full border border-line/80 bg-[var(--glass-bg)] px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-muted backdrop-blur-sm">
                   {item.type === 'Internship' ? (
                     <Briefcase className="size-3.5" aria-hidden />
                   ) : (
@@ -40,11 +40,11 @@ export default function Experience() {
                   {item.type}
                 </span>
               </div>
-              <h3 className="font-display text-xl font-semibold tracking-tight text-ink sm:text-2xl">
+              <h3 className="font-display text-xl font-semibold tracking-tight text-ink sm:text-2xl sm:leading-snug">
                 {item.title}
               </h3>
-              <p className="mt-2 text-sm font-medium text-ink-soft">{item.company}</p>
-              <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+              <p className="mt-2.5 text-sm font-medium text-ink-soft">{item.company}</p>
+              <p className="mt-5 text-sm leading-relaxed text-muted sm:text-base sm:leading-[1.75]">
                 {item.description}
               </p>
             </article>

@@ -24,15 +24,14 @@ export default function Hero() {
       id="top"
       className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pb-20 pt-28 sm:pb-28 sm:pt-32"
     >
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-paper" />
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute inset-0 mesh-hero"
-        animate={reduceMotion ? undefined : { opacity: [0.75, 1, 0.75] }}
-        transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+        className="pointer-events-none absolute inset-0 mesh-hero opacity-60"
+        animate={reduceMotion ? undefined : { opacity: [0.45, 0.7, 0.45] }}
+        transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
       />
-      <div aria-hidden className="pointer-events-none absolute inset-0 grid-fade" />
-      <div aria-hidden className="pointer-events-none absolute inset-0 noise opacity-40" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 grid-fade opacity-70" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 noise opacity-30" />
 
       <Container className="relative z-10">
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
@@ -62,7 +61,7 @@ export default function Hero() {
               variants={fadeUp}
               initial={reduceMotion ? false : 'hidden'}
               animate="visible"
-              className="font-display text-[2.75rem] font-semibold leading-[1.05] tracking-tight text-ink sm:text-6xl md:text-7xl lg:text-[4.75rem]"
+              className="font-display text-[2.75rem] font-semibold leading-[1.08] tracking-tight text-ink sm:text-6xl md:text-7xl lg:text-[4.75rem]"
             >
               {profile.name}
             </motion.h1>
@@ -72,7 +71,7 @@ export default function Hero() {
               variants={fadeUp}
               initial={reduceMotion ? false : 'hidden'}
               animate="visible"
-              className="mt-5 min-h-[2rem] font-display text-xl font-medium tracking-tight text-ink-soft sm:min-h-[2.5rem] sm:text-2xl md:text-3xl"
+              className="mt-6 min-h-[2rem] font-display text-xl font-medium tracking-tight text-ink-soft sm:min-h-[2.5rem] sm:text-2xl md:text-3xl"
             >
               <Typewriter words={roles} holdMs={2000} />
             </motion.div>
@@ -82,7 +81,7 @@ export default function Hero() {
               variants={fadeUp}
               initial={reduceMotion ? false : 'hidden'}
               animate="visible"
-              className="mt-7 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
+              className="mt-8 max-w-xl text-base leading-[1.75] text-muted sm:text-lg sm:leading-[1.8]"
             >
               {profile.tagline}
             </motion.p>
@@ -92,7 +91,7 @@ export default function Hero() {
               variants={fadeUp}
               initial={reduceMotion ? false : 'hidden'}
               animate="visible"
-              className="mt-10 flex flex-wrap items-center gap-3"
+              className="mt-11 flex flex-wrap items-center gap-3.5"
             >
               <Button href="/resume.pdf" variant="primary" download>
                 <Download className="size-4" />
@@ -138,7 +137,7 @@ export default function Hero() {
                 aria-hidden
                 className="absolute inset-3 rounded-full bg-ink/10 blur-2xl dark:bg-ink/20"
               />
-              <div className="group relative size-full overflow-hidden rounded-full border border-line bg-surface shadow-[0_24px_60px_-20px_rgba(0,0,0,0.35)] ring-1 ring-black/5 dark:shadow-[0_28px_70px_-18px_rgba(0,0,0,0.75)] dark:ring-white/10">
+              <div className="group relative size-full overflow-hidden rounded-full border border-line/80 bg-surface/80 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.35),0_0_60px_-20px_rgb(59_130_246/0.25)] ring-1 ring-black/5 backdrop-blur-sm dark:shadow-[0_28px_70px_-18px_rgba(0,0,0,0.75),0_0_70px_-18px_rgb(139_92_246/0.3)] dark:ring-white/10">
                 <img
                   src="/profile.jpg"
                   alt={`${profile.name} — professional portrait`}

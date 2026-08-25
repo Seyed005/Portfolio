@@ -72,7 +72,7 @@ export default function Certifications() {
       )}
 
       {certificates.length === 0 && (
-        <p className="rounded-2xl border border-dashed border-line bg-surface px-6 py-10 text-center text-sm text-muted">
+        <p className="glass-card rounded-2xl border-dashed px-6 py-10 text-center text-sm text-muted">
           Add certificate images to <code className="text-ink">public/certificates/</code> to
           populate this gallery.
         </p>

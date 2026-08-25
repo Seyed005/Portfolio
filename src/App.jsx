@@ -21,7 +21,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
-        <div className="min-h-svh bg-paper text-ink">
+        <div className="relative min-h-svh bg-paper text-ink">
           <AnimatedRoutes />
         </div>
       </BrowserRouter>
